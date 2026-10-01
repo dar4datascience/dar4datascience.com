@@ -52,7 +52,12 @@ jobs:
       - name: Smoke test
         run: |
           set -e
+          for i in $(seq 1 12); do
+            getent hosts dar4datascience.com >/dev/null && break
+            echo "waiting for DNS ($i)"; sleep 10
+          done
           curl -fsS https://dar4datascience.com/ | grep -q "Daniel Amieva Rodriguez"
+          test "$(curl -s -o /dev/null -w '%{redirect_url}' https://www.dar4datascience.com/experience)" = "https://dar4datascience.com/experience"
           curl -fsS https://dar4datascience.com/robots.txt | grep -q Sitemap
           curl -fsS -X POST https://dar4datascience.com/mcp \
             -H 'content-type: application/json' \
