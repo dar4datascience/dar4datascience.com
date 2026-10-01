@@ -1,0 +1,164 @@
+# Daniel Amieva Rodriguez
+
+> Senior Data Engineer | AWS & GCP Data Platforms | AI-Integrated Analytics. Mexico City, Mexico. 6+ years of experience.
+
+Daniel Amieva Rodriguez is a Senior Data Engineer based in Mexico City with 6+ years of experience building scalable data pipelines across AWS, GCP, and multi-cloud environments. He is currently Senior Data Engineer at TeamStation AI, where he architected a medallion data lake on AWS serverless services and integrated natural-language BI for business users. Previously he worked at Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM. He specializes in Python, advanced SQL, PySpark, ETL/ELT architecture, CI/CD, and LLM/MCP integration for analytics.
+
+## Experience
+
+### Senior Data Engineer at TeamStation AI (May 2025 – Present)
+
+Remote (Mexico City) — consultancy for international clients
+
+Architected an enterprise medallion data lake from scratch on AWS serverless and shipped self-service, natural-language analytics for business stakeholders.
+
+- Architected a ground-up medallion data lake (bronze/silver/gold) with custom Python packages and AWS Glue, Step Functions, Lambda, and DMS streaming.
+- Replaced Spark-heavy jobs with a DuckDB + Lambda architecture, cutting compute costs ~40% and processing time ~60% versus the equivalent Glue cluster approach.
+- Developed REST API endpoints with FastAPI and contributed to the Django backend, owning features end to end from API design to production deployment.
+- Offloaded analytics from the main application database into a dedicated PostgreSQL data warehouse and integrated ThoughtSpot BI for natural-language querying (NLQ).
+- Built an AI-enhanced Quarto documentation system covering Step Functions, Lambdas, and custom packages to speed up team onboarding.
+- Implemented CI/CD with GitHub Actions and infrastructure as code with AWS SAM, CloudFormation, and Terraform.
+
+Technologies: Python, SQL, PostgreSQL, AWS Glue, AWS Step Functions, AWS Lambda, AWS DMS, DuckDB, FastAPI, Django, ThoughtSpot, GitHub Actions, AWS SAM, CloudFormation, Terraform, Quarto
+
+### Business Intelligence Engineer IV at Rackspace Technology (2024 – 2025)
+
+Remote (Mexico City)
+
+Built enterprise ETL automation on BigQuery, created the organization's first Power BI CI/CD pipeline, and led a cost-optimization initiative worth over USD 1,000,000 per year.
+
+- Built Python ETL pipelines executing SQL against BigQuery and connecting 10+ enterprise APIs (Azure Monitor SDK, LeanIX OData, ServiceNow, SharePoint, Power BI); the AskHR pipeline ran hourly with zero manual intervention.
+- Independently designed and shipped an end-to-end Power BI CI/CD pipeline (Python + GitHub Actions + Azure AD service principals) for 90+ dashboards across 70+ workspaces, cutting deployment time from 60 minutes to 2 minutes.
+- Led BigQuery SQL performance tuning and decommissioning of stale assets, delivering estimated annual savings exceeding USD 1,000,000 and freeing 1,500+ engineering hours per year.
+- Built LLM-based applications for HR and BI use cases with OpenAI, Gemini, and agentic AI frameworks.
+- Worked with Databricks, Delta Lake, Unity Catalog, and GCP Dataproc/Dataflow for large-scale processing.
+
+Technologies: Python, SQL, BigQuery, Dataform, GitHub Actions, Power BI, Azure AD, Databricks, Delta Lake, PySpark, GCP Dataproc, GCP Dataflow, OpenAI API, Gemini API, Tableau, Jira
+
+### Senior BI Engineer at Baz Super App (2023 – 2024)
+
+Mexico City
+
+Led cross-cloud financial data streaming and automated marketing analytics on GCP.
+
+- Led sensitive financial data replication from AWS to BigQuery through a Kafka streaming pipeline, coordinating security, cloud, and data teams for compliant real-time availability.
+- Built and automated a Python ETL pipeline ingesting CleverTap marketing events into BigQuery, scheduled with GitHub Actions cron, enabling self-serve campaign reporting.
+- Implemented data validation and monitoring across cloud environments; worked with Databricks, Dataproc, Dataflow/Apache Beam, Pub/Sub, Cloud Functions, and Looker.
+
+Technologies: Python, SQL, BigQuery, Kafka, AWS, GCP, Cloud Composer, Pub/Sub, Apache Beam, Databricks, Looker, CleverTap, GitHub Actions
+
+### Data Engineer / BI Lead at DiDi Food (2021 – 2023)
+
+Mexico City
+
+Optimized Spark SQL workloads, automated analyst reporting, and led a SQL competency program for the team.
+
+- Tuned Spark SQL jobs via Python profiling and choke-point debugging, achieving a 40% reduction in job execution time.
+- Parameterized and automated SQL queries previously run manually by business users, saving ~100+ analyst hours per quarter.
+- Maintained data governance across customer-experience analytics pipelines spanning SQL Server and AWS sources (Athena, Glue, S3).
+- Designed and led a query competency program that raised the team's internal performance score and unlocked additional compute allocation.
+
+Technologies: Python, SQL, Spark, Presto, Hive, AWS Athena, AWS Glue, AWS S3, Airflow, dbt, Tableau, SQL Server, GitLab, Linux
+
+### Data Engineer at DGTIC UNAM (2019 – 2021)
+
+Mexico City
+
+Built the organization's first data warehouse for online lectures and pioneered Spark adoption for MOOC analytics.
+
+- Pioneered Spark adoption and built the first data warehouse for online lectures during the pandemic.
+- Collaborated with IT on database architecture and queried MOOC data from PostgreSQL for Big Data analytics.
+
+Technologies: Python, SQL, R, Spark, PostgreSQL, Docker, Linux
+
+## Skills
+
+- Languages: Python, SQL, PySpark, R, JavaScript, Bash
+- AWS: Glue, Lambda, Step Functions, DMS, S3, Athena, SAM, CloudFormation
+- GCP: BigQuery, Dataform, Dataproc, Dataflow / Apache Beam, Pub/Sub, Cloud Functions, Cloud Composer, Cloud Storage, Cloud Logging
+- Data Platforms & Processing: Databricks, Delta Lake, Unity Catalog, Spark, DuckDB, Kafka, Presto, Hive, PostgreSQL, Microsoft Fabric, NoSQL databases
+- Architecture & Modeling: Medallion architecture, ETL/ELT pipeline design, Streaming pipelines, Dimensional modeling (star / snowflake schema), Data governance
+- DevOps & IaC: GitHub Actions, GitLab CI, Terraform, Docker, Git / GitHub / GitLab / Bitbucket, Jira, Confluence
+- BI & Analytics: Power BI, Tableau, Looker, ThoughtSpot (NLQ), Quarto
+- AI Engineering: LLM integration (OpenAI, Gemini), Model Context Protocol (MCP), Agentic AI frameworks, Structured outputs, Natural-language querying
+- Backend: FastAPI, Django, REST APIs, OOP
+
+## Certifications
+
+- LLM Engineering with Structured Outputs — Weights & Biases, 2025
+- CI/CD for Machine Learning (GitOps) — Weights & Biases, 2024
+- Azure AI Fundamentals — Microsoft, 2024
+- Applying Machine Learning and AI Services on AWS — Cloud Academy, 2023
+- Engineer Data in Google Cloud — Google, 2023
+
+## Education
+
+- Specialization, Data Science, Universidad Nacional Autónoma de México (UNAM) (2019–2020)
+- Bachelor's degree, Economics, Universidad Nacional Autónoma de México (UNAM) (2015–2021)
+
+## Projects
+
+- [Datos Transporte CDMX](https://github.com/dar4datascience/Datos-Transporte-CDMX): Open data pipelines for Mexico City public transport (Metrobús, then Metro).
+- [AWS SAM Cultura CDMX](https://github.com/dar4datascience/AWS-SAM-Cultura-CDMX): Serverless data pipeline for Mexico City cultural events built with AWS SAM.
+- [Dynamic QR Code on a Shoestring](https://github.com/dar4datascience/Dynamic-QR-code-on-a-shoestring): Low-cost dynamic QR code redirect service.
+- [Demo Shiny Gemini](https://github.com/dar4datascience/Demo-Shiny-Gemini): R Shiny application integrated with the Gemini API.
+- [Observable Movie Showcase](https://github.com/dar4datascience/Observable-Movie-Showcase): Interactive movie data visualization with Observable.
+- [Measuring Inequality with Satellite Images](https://github.com/dar4datascience/Measuring-Inequality-with-Satellite-Images): Research using NASA Black Marble (VNP46) night-light imagery to estimate inequality.
+- [Curriculum Vitae (automated)](https://dar4datascience.github.io/Curriculum-Vitae/): CV pipeline built with R targets, Quarto, and GitHub Actions, published to GitHub Pages.
+
+## Services
+
+- Cloud data platform architecture: Design and build data lakes and warehouses on AWS (Glue, Lambda, Step Functions, DMS) or GCP (BigQuery, Dataform, Dataproc, Dataflow), using medallion architecture and infrastructure as code.
+- ETL/ELT pipeline engineering: Python and SQL pipelines with CI/CD, testing, monitoring, and cost optimization; batch and streaming (Kafka, DMS, Pub/Sub).
+- Analytics engineering & BI automation: Self-service analytics with Power BI, Tableau, Looker, or ThoughtSpot, including BI deployment pipelines and natural-language querying.
+- AI integration for data teams: LLM and MCP integrations that let agents and business users query governed data safely; AI-enhanced documentation and automation.
+- Cost & performance optimization: Query tuning, workload right-sizing, and asset decommissioning with measurable savings (USD 1M+ annual at Rackspace; ~40% compute reduction at TeamStation AI).
+
+## FAQ
+
+### Who is Daniel Amieva Rodriguez?
+
+Daniel Amieva Rodriguez is a Senior Data Engineer from Mexico City, Mexico, with 6+ years of experience building data platforms on AWS and GCP. He currently works at TeamStation AI and previously held data and BI engineering roles at Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM.
+
+### What does Daniel Amieva Rodriguez do?
+
+He architects cloud data lakes and warehouses, builds Python and SQL ETL/ELT pipelines with CI/CD, optimizes query and compute costs, and integrates LLM and MCP tooling so business users and AI agents can query governed data.
+
+### Is Daniel Amieva Rodriguez a data engineer?
+
+Yes. Daniel Amieva Rodriguez is a Senior Data Engineer. His official titles have included Senior Data Engineer (TeamStation AI), Business Intelligence Engineer IV (Rackspace Technology), Senior BI Engineer (Baz Super App), and Data Engineer / BI Lead (DiDi Food).
+
+### What technologies does Daniel Amieva Rodriguez specialize in?
+
+Python, SQL, PySpark, AWS (Glue, Lambda, Step Functions, DMS, SAM), GCP (BigQuery, Dataform, Dataproc, Dataflow), Databricks and Delta Lake, DuckDB, Kafka, PostgreSQL, GitHub Actions, Terraform, and LLM/MCP integration.
+
+### Where is Daniel Amieva Rodriguez based?
+
+Mexico City, Mexico. He works remotely with international clients and is fluent in English and a native Spanish speaker.
+
+### What is Daniel Amieva Rodriguez's education?
+
+A Bachelor's degree in Economics (2015–2021) and a Specialization in Data Science (2019–2020), both from the Universidad Nacional Autónoma de México (UNAM).
+
+### What measurable results has Daniel Amieva Rodriguez delivered?
+
+Estimated annual savings exceeding USD 1,000,000 from BigQuery optimization and asset decommissioning at Rackspace Technology; Power BI deployment time cut from 60 to 2 minutes; ~40% compute cost and ~60% processing-time reduction on AWS at TeamStation AI; 40% faster Spark SQL jobs at DiDi Food.
+
+### How can I contact Daniel Amieva Rodriguez?
+
+Email danielamieva@dar4datascience.com, or connect on LinkedIn at linkedin.com/in/dar-4-ds. Code is on GitHub at github.com/dar4datascience.
+
+### What is dar4datascience?
+
+dar4datascience is the online handle of Daniel Amieva Rodriguez (D.A.R. for data science). It is used for his GitHub account, this website, and his data engineering projects.
+
+## Links
+
+- [Home](https://dar4datascience.com/)
+- [LinkedIn](https://www.linkedin.com/in/dar-4-ds)
+- [GitHub](https://github.com/dar4datascience)
+- Email: danielamieva@dar4datascience.com
+
+## MCP endpoint
+
+This site exposes a Model Context Protocol (MCP) server at https://dar4datascience.com/mcp (POST JSON-RPC 2.0, streamable-http transport). Tools: get_profile, get_experience, get_skills, get_projects, get_services, get_faq, score_job_fit.

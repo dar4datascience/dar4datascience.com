@@ -1,0 +1,45 @@
+# Daniel Amieva Rodriguez
+
+> Senior Data Engineer | AWS & GCP Data Platforms | AI-Integrated Analytics. Mexico City, Mexico. 6+ years of experience.
+
+Daniel Amieva Rodriguez is a Senior Data Engineer based in Mexico City with 6+ years of experience building scalable data pipelines across AWS, GCP, and multi-cloud environments. He is currently Senior Data Engineer at TeamStation AI, where he architected a medallion data lake on AWS serverless services and integrated natural-language BI for business users. Previously he worked at Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM. He specializes in Python, advanced SQL, PySpark, ETL/ELT architecture, CI/CD, and LLM/MCP integration for analytics.
+
+## Current role
+
+- Senior Data Engineer at TeamStation AI (May 2025 – Present): Architected an enterprise medallion data lake from scratch on AWS serverless and shipped self-service, natural-language analytics for business stakeholders.
+
+## Experience
+
+- Senior Data Engineer at TeamStation AI (May 2025 – Present)
+- Business Intelligence Engineer IV at Rackspace Technology (2024 – 2025)
+- Senior BI Engineer at Baz Super App (2023 – 2024)
+- Data Engineer / BI Lead at DiDi Food (2021 – 2023)
+- Data Engineer at DGTIC UNAM (2019 – 2021)
+
+## Skills
+
+- Languages: Python, SQL, PySpark, R, JavaScript, Bash
+- AWS: Glue, Lambda, Step Functions, DMS, S3, Athena, SAM, CloudFormation
+- GCP: BigQuery, Dataform, Dataproc, Dataflow / Apache Beam, Pub/Sub, Cloud Functions, Cloud Composer, Cloud Storage, Cloud Logging
+- Data Platforms & Processing: Databricks, Delta Lake, Unity Catalog, Spark, DuckDB, Kafka, Presto, Hive, PostgreSQL, Microsoft Fabric, NoSQL databases
+- Architecture & Modeling: Medallion architecture, ETL/ELT pipeline design, Streaming pipelines, Dimensional modeling (star / snowflake schema), Data governance
+- DevOps & IaC: GitHub Actions, GitLab CI, Terraform, Docker, Git / GitHub / GitLab / Bitbucket, Jira, Confluence
+- BI & Analytics: Power BI, Tableau, Looker, ThoughtSpot (NLQ), Quarto
+- AI Engineering: LLM integration (OpenAI, Gemini), Model Context Protocol (MCP), Agentic AI frameworks, Structured outputs, Natural-language querying
+- Backend: FastAPI, Django, REST APIs, OOP
+
+## Links
+
+- [Home](https://dar4datascience.com/)
+- [Experience](https://dar4datascience.com/experience)
+- [Skills](https://dar4datascience.com/skills)
+- [Projects](https://dar4datascience.com/projects)
+- [Services](https://dar4datascience.com/services)
+- [Contact](https://dar4datascience.com/contact)
+- [LinkedIn](https://www.linkedin.com/in/dar-4-ds)
+- [GitHub](https://github.com/dar4datascience)
+- Email: danielamieva@dar4datascience.com
+
+## MCP endpoint
+
+This site exposes a Model Context Protocol (MCP) server at https://dar4datascience.com/mcp (POST JSON-RPC 2.0, streamable-http transport). Tools: get_profile, get_experience, get_skills, get_projects, get_services, get_faq, score_job_fit.
