@@ -94,7 +94,7 @@ ${education.map((e) => `- ${e.degree}, ${e.institution} (${e.start}–${e.end})`
 
 ## Projects
 
-${projects.map((p) => `- [${p.name}](${p.url}): ${p.description}`).join("\n")}
+${projects.map((p) => `- [${p.name}](${p.url}): ${p.description}${p.demo ? ` Demo: ${p.demo}` : ""}`).join("\n")}
 
 ## Services
 

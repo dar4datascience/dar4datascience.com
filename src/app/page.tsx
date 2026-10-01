@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import TechIcon, { TechChip } from "@/components/TechIcon";
 import { homeJsonLd } from "@/lib/schema";
 import { formatDateRange } from "@/lib/format";
 import {
@@ -9,6 +10,7 @@ import {
   experience,
   skills,
   faq,
+  projects,
 } from "@/data/profile";
 
 export const metadata: Metadata = {
@@ -34,6 +36,33 @@ const KEY_RESULTS = [
   "Power BI deployment time cut from 60 minutes to 2 minutes via a custom CI/CD pipeline",
   "~40% compute cost and ~60% processing-time reduction on AWS with a DuckDB + Lambda architecture",
   "40% faster Spark SQL jobs through Python profiling and tuning at DiDi Food",
+];
+
+const TECH_STACK = [
+  "Python",
+  "PySpark",
+  "R",
+  "DuckDB",
+  "BigQuery",
+  "Databricks",
+  "Kafka",
+  "Airflow",
+  "PostgreSQL",
+  "Docker",
+  "Terraform",
+  "GitHub Actions",
+  "FastAPI",
+  "Django",
+  "Quarto",
+  "Cloudflare Workers",
+  "Looker",
+  "Gemini",
+  "Anthropic",
+  "MCP",
+  "Observable",
+  "pandas",
+  "OpenCV",
+  "C++",
 ];
 
 const STATS = [
@@ -157,6 +186,28 @@ export default function Home() {
         </ul>
       </section>
 
+      <section aria-labelledby="tech-stack" className="py-10">
+        <h2 id="tech-stack" className="eyebrow text-center">
+          Tech stack
+        </h2>
+        <ul className="mt-6 grid grid-cols-3 gap-x-4 gap-y-6 sm:grid-cols-4 md:grid-cols-6">
+          {TECH_STACK.map((t) => (
+            <li
+              key={t}
+              className="group flex flex-col items-center gap-2 text-center"
+            >
+              <TechIcon
+                name={t}
+                className="h-7 w-7 text-subtle transition-colors group-hover:text-[var(--brand)]"
+              />
+              <span className="text-xs font-medium text-subtle transition-colors group-hover:text-foreground">
+                {t}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section aria-labelledby="about" className="py-16 md:py-24">
         <p className="eyebrow">About</p>
         <h2 id="about" className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
@@ -211,6 +262,61 @@ export default function Home() {
         </article>
       </section>
 
+      <section aria-labelledby="selected-projects" className="py-16 md:py-24">
+        <p className="eyebrow">Selected projects</p>
+        <h2
+          id="selected-projects"
+          className="mt-2 text-3xl font-bold tracking-tight md:text-4xl"
+        >
+          Things I&apos;ve built
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {[...projects.filter((p) => p.featured), ...projects.filter((p) => !p.featured)]
+            .slice(0, 4)
+            .map((p) => (
+              <article key={p.name} className="card flex flex-col p-6">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-lg font-semibold tracking-tight">
+                    {p.name}
+                  </h3>
+                  <span className="flex items-center gap-2 text-subtle">
+                    {p.tags.slice(0, 4).map((t) => (
+                      <TechIcon key={t} name={t} className="h-4 w-4" />
+                    ))}
+                  </span>
+                </div>
+                <p className="mt-2 flex-1 text-sm text-muted">
+                  {p.description}
+                </p>
+                <div className="mt-4 flex gap-4 text-sm font-medium">
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      rel="noopener"
+                      className="text-accent hover:underline"
+                    >
+                      Demo ↗
+                    </a>
+                  )}
+                  <a
+                    href={p.url}
+                    rel="noopener"
+                    className="text-muted hover:text-accent"
+                  >
+                    Code ↗
+                  </a>
+                </div>
+              </article>
+            ))}
+        </div>
+        <Link
+          href="/projects"
+          className="mt-6 inline-block text-sm font-medium text-accent hover:underline"
+        >
+          All projects →
+        </Link>
+      </section>
+
       <section aria-labelledby="skills" className="py-16 md:py-24">
         <p className="eyebrow">Skills</p>
         <h2 id="skills" className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
@@ -222,12 +328,7 @@ export default function Home() {
               <h3 className="eyebrow">{s.category}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {s.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent"
-                  >
-                    {item}
-                  </li>
+                  <TechChip key={item} name={item} />
                 ))}
               </ul>
             </div>

@@ -315,7 +315,92 @@ export const education = [
   },
 ];
 
-export const projects = [
+export const projects: {
+  name: string;
+  description: string;
+  url: string;
+  demo?: string;
+  featured?: boolean;
+  tags: string[];
+}[] = [
+  {
+    name: "Equal Earth Poipoi",
+    description:
+      "R Shiny dashboard that compares the area of any two countries under Mercator (EPSG:3395) and Equal Earth (EPSG:8857) projections, overlays each country's Mercator outline on its true shape to quantify distortion (e.g. Greenland ~16×), and compares Latin America as a block against the United States. Projections are re-centred on each country's meridian to avoid antimeridian splits.",
+    url: "https://github.com/dar4datascience/Equal-Earth-Poipoi",
+    demo: "https://connect.posit.cloud/dar4datascience/content/01a0d67a-ee27-1f9e-1bd8-18a09de36d01",
+    featured: true,
+    tags: ["R", "Shiny", "sf", "Geospatial", "Posit Connect Cloud"],
+  },
+  {
+    name: "Demo SNIIM Mexico",
+    description:
+      "End-to-end retrieval example for Mexico's SNIIM market-price system (Secretaría de Economía): discovers available markets, builds date-range queries, downloads the HTML results and parses them into a clean pandas DataFrame with optional CSV export. Documented as a Quarto site.",
+    url: "https://github.com/dar4datascience/Demo-SNIIM-Mexico",
+    demo: "https://dar4datascience.github.io/Demo-SNIIM-Mexico/",
+    featured: true,
+    tags: ["Python", "Web scraping", "BeautifulSoup", "pandas", "Quarto"],
+  },
+  {
+    name: "Catálogo Películas Biblioteca Vasconcelos",
+    description:
+      "Data pipeline that turns the Biblioteca Vasconcelos film collection, published only as PDFs, into a searchable catalog: compares regex, Camelot and hybrid PDF table-extraction methods, enriches titles with TMDB/OMDb metadata and director filmographies, routes hard matches to fuzzy review, and publishes an interactive Quarto + ObservableJS site via GitHub Actions.",
+    url: "https://github.com/dar4datascience/Catalogo-Peliculas-Biblioteca-Vasconcelos",
+    demo: "https://dar4datascience.github.io/Catalogo-Peliculas-Biblioteca-Vasconcelos/",
+    tags: ["Python", "PDF extraction", "TMDB API", "Quarto", "ObservableJS", "GitHub Actions"],
+  },
+  {
+    name: "DuckDB Eurostat MCP Server",
+    description:
+      "Model Context Protocol server that answers natural-language questions over Eurostat data by translating them to SQL and executing them with the DuckDB Eurostat extension (filter pushdown). Supports Anthropic, OpenAI, Azure OpenAI or local Ollama models, plus dataset discovery and schema inspection.",
+    url: "https://github.com/dar4datascience/duckdb-eurostat-mcp",
+    tags: ["Python", "MCP", "DuckDB", "LLM", "Text-to-SQL"],
+  },
+  {
+    name: "DuckDB INEGI Extension",
+    description:
+      "Native DuckDB extension written in C++ that fetches statistical indicators from INEGI (Mexico's national statistics institute) APIs directly in SQL, with token-based authentication and JSON-Stat parsing.",
+    url: "https://github.com/dar4datascience/duck_inegi",
+    tags: ["C++", "DuckDB", "CMake", "vcpkg", "REST API"],
+  },
+  {
+    name: "Catálogo VideoClub",
+    description:
+      "Migration of a video-club catalog from an R/targets/Google Sheets pipeline to Python + Parquet: incremental Parquet lookup cache, title matching through an MCP server and OMDb/TMDB APIs, an interactive Quarto + ObservableJS site, and Playwright tests on the rendered output.",
+    url: "https://github.com/dar4datascience/Catalogo-VideoClub",
+    demo: "https://dar4datascience.github.io/Catalogo-VideoClub/",
+    tags: ["Python", "Parquet", "MCP", "Quarto", "ObservableJS", "Playwright"],
+  },
+  {
+    name: "Movie List Maker",
+    description:
+      "Python app that processes videos of movie covers with spoken titles: OpenCV + Tesseract OCR and OpenAI Whisper extract titles, string-similarity validation reconciles them, and a numbered, timestamped list is published as a Quarto website on GitHub Pages.",
+    url: "https://github.com/dar4datascience/Movie-List-Maker",
+    demo: "https://dar4datascience.github.io/Movie-List-Maker/",
+    tags: ["Python", "OpenCV", "Tesseract OCR", "Whisper", "Quarto"],
+  },
+  {
+    name: "Random YMList Worker",
+    description:
+      "Cloudflare Worker that serves random YouTube Music playlist URLs by genre from a bundled markdown source, exposing a JSON API.",
+    url: "https://github.com/dar4datascience/random-ymlist-worker",
+    tags: ["JavaScript", "Cloudflare Workers", "Serverless", "REST API"],
+  },
+  {
+    name: "Epoxy Shiny Demo",
+    description:
+      "Movie explorer built with R Shiny, epoxy templating and bslib, compiled with shinylive so it runs entirely in the browser on GitHub Pages with no server.",
+    url: "https://github.com/dar4datascience/Epoxy-Shiny-Demo",
+    demo: "https://dar4datascience.github.io/Epoxy-Shiny-Demo/",
+    tags: ["R", "Shiny", "shinylive", "WebAssembly", "bslib"],
+  },
+  {
+    name: "iCalendar Maker",
+    description:
+      "Python utility that converts a JSON schedule of workshops into an .ics calendar with reminders, a Todoist import CSV, and a QR code for sharing.",
+    url: "https://github.com/dar4datascience/icalendar-maker",
+    tags: ["Python", "iCalendar", "Automation"],
+  },
   {
     name: "Datos Transporte CDMX",
     description:
@@ -354,13 +439,6 @@ export const projects = [
       "Research using NASA Black Marble (VNP46) night-light imagery to estimate inequality.",
     url: "https://github.com/dar4datascience/Measuring-Inequality-with-Satellite-Images",
     tags: ["Remote sensing", "Economics", "Python"],
-  },
-  {
-    name: "Curriculum Vitae (automated)",
-    description:
-      "CV pipeline built with R targets, Quarto, and GitHub Actions, published to GitHub Pages.",
-    url: "https://dar4datascience.github.io/Curriculum-Vitae/",
-    tags: ["Quarto", "R", "CI/CD"],
   },
 ];
 

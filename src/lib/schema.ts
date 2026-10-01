@@ -6,6 +6,7 @@ import {
   certifications,
   education,
   faq,
+  projects,
 } from "@/data/profile";
 
 export const PERSON_ID = `${SITE_URL}/#person`;
@@ -108,6 +109,38 @@ export function experienceJsonLd() {
             worksFor: { "@type": "Organization", name: r.company },
             startDate: r.start,
             ...(r.end ? { endDate: r.end } : {}),
+          },
+        })),
+      },
+    ],
+  };
+}
+
+export function projectsJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/projects`,
+        url: `${SITE_URL}/projects`,
+        name: `Projects — ${person.name}`,
+        about: { "@id": PERSON_ID },
+      },
+      {
+        "@type": "ItemList",
+        name: `Projects by ${person.name}`,
+        itemListElement: projects.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "SoftwareSourceCode",
+            name: p.name,
+            description: p.description,
+            codeRepository: p.url,
+            url: p.demo ?? p.url,
+            programmingLanguage: p.tags[0],
+            author: { "@id": PERSON_ID },
           },
         })),
       },

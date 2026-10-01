@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { pageJsonLd } from "@/lib/schema";
+import { TechChip } from "@/components/TechIcon";
 import {
   SITE_URL,
   skills,
@@ -40,12 +41,7 @@ export default function SkillsPage() {
               <h2 className="eyebrow">{s.category}</h2>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {s.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent"
-                  >
-                    {item}
-                  </li>
+                  <TechChip key={item} name={item} />
                 ))}
               </ul>
             </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { experienceJsonLd } from "@/lib/schema";
 import { formatDateRange } from "@/lib/format";
+import { TechChip } from "@/components/TechIcon";
 import { SITE_URL, experience } from "@/data/profile";
 
 export const metadata: Metadata = {
@@ -52,12 +53,7 @@ export default function ExperiencePage() {
               </ul>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {role.technologies.map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent"
-                  >
-                    {t}
-                  </li>
+                  <TechChip key={t} name={t} />
                 ))}
               </ul>
             </article>
