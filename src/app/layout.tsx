@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL, person } from "@/data/profile";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -10,7 +13,7 @@ export const metadata: Metadata = {
     default: `${person.name} — ${person.jobTitle}`,
     template: "%s | Daniel Amieva Rodriguez",
   },
-  description: person.summary,
+  description: person.tagline,
   robots: {
     index: true,
     follow: true,
@@ -29,10 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <body className="flex min-h-screen flex-col antialiased">
         <Header />
-        <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8">
+        <main className="mx-auto w-full max-w-5xl flex-1 px-4 sm:px-6">
           {children}
         </main>
         <Footer />

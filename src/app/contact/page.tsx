@@ -23,58 +23,65 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={pageJsonLd("/contact", "Contact — Daniel Amieva Rodriguez")} />
-      <h1 className="text-3xl font-bold">Contact</h1>
-      <div className="mt-6 rounded-lg border border-border bg-card p-5">
-        <dl className="space-y-3">
-          <div>
-            <dt className="text-sm font-semibold text-accent">Email</dt>
-            <dd>
-              <a
-                href={`mailto:${person.email}`}
-                className="text-accent hover:underline"
-              >
-                {person.email}
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt className="text-sm font-semibold text-accent">LinkedIn</dt>
-            <dd>
-              <a
-                href={person.linkedin}
-                rel="noopener"
-                className="text-accent hover:underline"
-              >
-                linkedin.com/in/dar-4-ds
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt className="text-sm font-semibold text-accent">GitHub</dt>
-            <dd>
-              <a
-                href={person.github}
-                rel="noopener"
-                className="text-accent hover:underline"
-              >
-                github.com/dar4datascience
-              </a>
-            </dd>
-          </div>
-          <div>
-            <dt className="text-sm font-semibold text-accent">Location</dt>
-            <dd>
-              {person.location.city}, {person.location.country}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-sm font-semibold text-accent">Languages</dt>
-            <dd>
-              {person.languages.map((l) => `${l.name} (${l.level})`).join(", ")}
-            </dd>
-          </div>
-        </dl>
-      </div>
+      <section className="py-16 md:py-24">
+        <p className="eyebrow">Get in touch</p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+          Contact
+        </h1>
+        <div className="card mx-auto mt-10 max-w-xl p-8">
+          <dl className="space-y-5">
+            <div>
+              <dt className="eyebrow">Email</dt>
+              <dd className="mt-1">
+                <a
+                  href={`mailto:${person.email}`}
+                  className="font-medium text-accent hover:underline"
+                >
+                  {person.email}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow">LinkedIn</dt>
+              <dd className="mt-1">
+                <a
+                  href={person.linkedin}
+                  rel="noopener"
+                  className="font-medium text-accent hover:underline"
+                >
+                  linkedin.com/in/dar-4-ds ↗
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow">GitHub</dt>
+              <dd className="mt-1">
+                <a
+                  href={person.github}
+                  rel="noopener"
+                  className="font-medium text-accent hover:underline"
+                >
+                  github.com/dar4datascience ↗
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow">Location</dt>
+              <dd className="mt-1">
+                {person.location.city}, {person.location.country}
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow">Languages</dt>
+              <dd className="mt-1">
+                {person.languages
+                  .map((l) => `${l.name} (${l.level})`)
+                  .join(", ")}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </>
   );
 }

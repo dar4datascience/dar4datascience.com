@@ -1,8 +1,16 @@
 # Daniel Amieva Rodriguez
 
-> Senior Data Engineer | AWS & GCP Data Platforms | AI-Integrated Analytics. Mexico City, Mexico. 6+ years of experience.
+> Senior Full-Stack Data Engineer | Data Lakes from Scratch | Multi-Cloud (AWS, GCP, Azure) | Backend-to-Analytics Delivery. Mexico City, Mexico. 6+ years of experience.
 
-Daniel Amieva Rodriguez is a Senior Data Engineer based in Mexico City with 6+ years of experience building scalable data pipelines across AWS, GCP, and multi-cloud environments. He is currently Senior Data Engineer at TeamStation AI, where he architected a medallion data lake on AWS serverless services and integrated natural-language BI for business users. Previously he worked at Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM. He specializes in Python, advanced SQL, PySpark, ETL/ELT architecture, CI/CD, and LLM/MCP integration for analytics.
+Daniel Amieva Rodriguez is a Senior Full-Stack Data Engineer based in Mexico City with 6+ years of experience delivering data platforms end to end across AWS, GCP, and Azure. He architects data lakes from scratch (a medallion lake on AWS Glue, Step Functions, Lambda, and DMS at TeamStation AI) and takes over existing platforms to optimize them (BigQuery tuning and asset decommissioning worth USD 1M+ per year at Rackspace Technology; 40% faster Spark SQL at DiDi Food). He works the full stack of the data path: FastAPI and Django backend modules that send application data into the lake, integrations with 10+ third-party services and APIs (Azure Monitor, ServiceNow, LeanIX, SharePoint, Power BI, CleverTap, ThoughtSpot), cross-cloud streaming (AWS to BigQuery via Kafka), CI/CD and infrastructure as code, and LLM/MCP integration so business users and AI agents can query governed data. Previous roles: Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM.
+
+## What I bring
+
+- Architects data lakes from scratch (medallion architecture on AWS serverless) and optimizes inherited platforms (BigQuery, Spark, Databricks).
+- Full-stack ownership: builds the FastAPI/Django backend modules that emit data, the pipelines that move it, and the BI/AI layer that serves it.
+- Connects third-party services into the platform: 10+ enterprise APIs at Rackspace (Azure Monitor SDK, LeanIX OData, ServiceNow, SharePoint, Power BI), CleverTap at Baz, ThoughtSpot at TeamStation AI.
+- Multi-cloud delivery: AWS (Glue, Lambda, Step Functions, DMS, SAM), GCP (BigQuery, Dataform, Dataproc, Dataflow, Pub/Sub), Azure (AD, Monitor, Fabric), including cross-cloud streaming from AWS to BigQuery with Kafka.
+- Self-starter with measurable outcomes: USD 1M+ annual savings, deployments cut from 60 to 2 minutes, ~40% compute cost and ~60% processing-time reductions.
 
 ## Current role
 

@@ -2,43 +2,191 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --accent: #4b0082;
-  --accent-contrast: #ffffff;
-  --muted: #555555;
-  --card: #f6f4fa;
-  --border: #e2deec;
+  --foreground: #0b0b10;
+  --muted: #4a4a55;
+  --subtle: #88889a;
+  --surface: #f7f7fa;
+  --border: #ebebf0;
+  --accent: #5b3fd1;
+  --accent-hover: #4a32b0;
+  --accent-soft: #efeafd;
+  --success: #22c55e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
   --color-muted: var(--muted);
-  --color-card: var(--card);
+  --color-subtle: var(--subtle);
+  --color-surface: var(--surface);
   --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d0b12;
-    --foreground: #ededed;
-    --accent: #b98ae0;
+    --background: #0b0b10;
+    --foreground: #ededf2;
     --muted: #a5a0b3;
-    --card: #17141f;
-    --border: #2e2839;
+    --subtle: #6f6f80;
+    --surface: #131219;
+    --border: #232230;
+    --accent: #a78bfa;
+    --accent-hover: #c4b5fd;
+    --accent-soft: #1e1a33;
+    --success: #22c55e;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--subtle);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transform: translateY(-2px);
+}
+
+.glass {
+  background: color-mix(in srgb, #ffffff 70%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: color-mix(in srgb, #0b0b10 60%, transparent);
+  }
+}
+
+/* Aurora blobs behind the hero — static, decorative, no motion */
+.hero-aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-aurora::before,
+.hero-aurora::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+}
+
+.hero-aurora::before {
+  width: 560px;
+  height: 560px;
+  top: -220px;
+  left: -120px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 28%, transparent),
+    transparent 70%
+  );
+}
+
+.hero-aurora::after {
+  width: 480px;
+  height: 480px;
+  top: -160px;
+  right: -100px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, #c084fc 22%, transparent),
+    transparent 70%
+  );
+}
+
+/* Pulsing status dot — animation off under reduced motion */
+.status-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--success);
+}
+
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  border: 2px solid var(--success);
+  opacity: 0.6;
+  animation: status-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes status-ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot::after {
+    animation: none;
+  }
+  .card {
+    transition: none;
+  }
+}
+
+/* FAQ chevron */
+details summary .faq-chevron {
+  transition: transform 0.2s ease;
+}
+
+details[open] summary .faq-chevron {
+  transform: rotate(180deg);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }

@@ -23,38 +23,47 @@ export default function ExperiencePage() {
   return (
     <>
       <JsonLd data={experienceJsonLd()} />
-      <h1 className="text-3xl font-bold">Experience</h1>
-      <div className="mt-6 space-y-6">
-        {experience.map((role) => (
-          <article
-            key={role.company}
-            className="rounded-lg border border-border bg-card p-5"
-          >
-            <h2 className="text-xl font-semibold">
-              {role.title} · {role.company}
-            </h2>
-            <p className="mt-1 text-sm text-muted">
-              {formatDateRange(role.start, role.end)} · {role.location}
-            </p>
-            <p className="mt-2">{role.summary}</p>
-            <ul className="mt-3 list-disc space-y-1.5 pl-5">
-              {role.highlights.map((h) => (
-                <li key={h}>{h}</li>
-              ))}
-            </ul>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {role.technologies.map((t) => (
-                <li
-                  key={t}
-                  className="rounded-full border border-border px-2.5 py-0.5 text-xs"
-                >
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
+      <section className="py-16 md:py-24">
+        <p className="eyebrow">Career</p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+          Experience
+        </h1>
+        <div className="mt-12 space-y-10">
+          {experience.map((role) => (
+            <article
+              key={role.company}
+              className="relative border-l-2 border-border pl-8"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute -left-[7px] top-1.5 h-3 w-3 rounded-full border-2 border-accent bg-background"
+              />
+              <h2 className="text-xl font-semibold tracking-tight md:text-2xl">
+                {role.title} · {role.company}
+              </h2>
+              <p className="mt-1 text-sm text-subtle">
+                {formatDateRange(role.start, role.end)} · {role.location}
+              </p>
+              <p className="mt-3 text-muted">{role.summary}</p>
+              <ul className="mt-4 list-disc space-y-1.5 pl-5 text-muted">
+                {role.highlights.map((h) => (
+                  <li key={h}>{h}</li>
+                ))}
+              </ul>
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {role.technologies.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

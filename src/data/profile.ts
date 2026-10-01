@@ -10,9 +10,9 @@ export const person = {
   familyName: "Amieva Rodriguez",
   jobTitle: "Senior Data Engineer",
   headline:
-    "Senior Data Engineer | AWS & GCP Data Platforms | AI-Integrated Analytics",
+    "Senior Full-Stack Data Engineer | Data Lakes from Scratch | Multi-Cloud (AWS, GCP, Azure) | Backend-to-Analytics Delivery",
   tagline:
-    "I design and ship cloud data platforms on AWS and GCP, automate analytics with Python and SQL, and connect LLM tooling to real business data.",
+    "I own the whole data path: backend modules that emit the data, third-party API integrations that enrich it, the lake or warehouse that stores it, and the BI and AI layer that serves it. I architect data lakes from scratch or take over and optimize existing ones, across AWS, GCP, and Azure.",
   location: { city: "Mexico City", country: "Mexico", countryCode: "MX" },
   email: "danielamieva@dar4datascience.com",
   linkedin: "https://www.linkedin.com/in/dar-4-ds",
@@ -23,7 +23,14 @@ export const person = {
   ],
   yearsOfExperience: "6+",
   summary:
-    "Daniel Amieva Rodriguez is a Senior Data Engineer based in Mexico City with 6+ years of experience building scalable data pipelines across AWS, GCP, and multi-cloud environments. He is currently Senior Data Engineer at TeamStation AI, where he architected a medallion data lake on AWS serverless services and integrated natural-language BI for business users. Previously he worked at Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM. He specializes in Python, advanced SQL, PySpark, ETL/ELT architecture, CI/CD, and LLM/MCP integration for analytics.",
+    "Daniel Amieva Rodriguez is a Senior Full-Stack Data Engineer based in Mexico City with 6+ years of experience delivering data platforms end to end across AWS, GCP, and Azure. He architects data lakes from scratch (a medallion lake on AWS Glue, Step Functions, Lambda, and DMS at TeamStation AI) and takes over existing platforms to optimize them (BigQuery tuning and asset decommissioning worth USD 1M+ per year at Rackspace Technology; 40% faster Spark SQL at DiDi Food). He works the full stack of the data path: FastAPI and Django backend modules that send application data into the lake, integrations with 10+ third-party services and APIs (Azure Monitor, ServiceNow, LeanIX, SharePoint, Power BI, CleverTap, ThoughtSpot), cross-cloud streaming (AWS to BigQuery via Kafka), CI/CD and infrastructure as code, and LLM/MCP integration so business users and AI agents can query governed data. Previous roles: Rackspace Technology, Baz Super App, DiDi Food, and DGTIC UNAM.",
+  differentiators: [
+    "Architects data lakes from scratch (medallion architecture on AWS serverless) and optimizes inherited platforms (BigQuery, Spark, Databricks).",
+    "Full-stack ownership: builds the FastAPI/Django backend modules that emit data, the pipelines that move it, and the BI/AI layer that serves it.",
+    "Connects third-party services into the platform: 10+ enterprise APIs at Rackspace (Azure Monitor SDK, LeanIX OData, ServiceNow, SharePoint, Power BI), CleverTap at Baz, ThoughtSpot at TeamStation AI.",
+    "Multi-cloud delivery: AWS (Glue, Lambda, Step Functions, DMS, SAM), GCP (BigQuery, Dataform, Dataproc, Dataflow, Pub/Sub), Azure (AD, Monitor, Fabric), including cross-cloud streaming from AWS to BigQuery with Kafka.",
+    "Self-starter with measurable outcomes: USD 1M+ annual savings, deployments cut from 60 to 2 minutes, ~40% compute cost and ~60% processing-time reductions.",
+  ],
 } as const;
 
 export type Role = {
@@ -359,9 +366,19 @@ export const projects = [
 
 export const services = [
   {
-    name: "Cloud data platform architecture",
+    name: "Data lake architecture — from scratch or takeover",
     description:
-      "Design and build data lakes and warehouses on AWS (Glue, Lambda, Step Functions, DMS) or GCP (BigQuery, Dataform, Dataproc, Dataflow), using medallion architecture and infrastructure as code.",
+      "Design and build data lakes and warehouses on AWS (Glue, Lambda, Step Functions, DMS) or GCP (BigQuery, Dataform, Dataproc, Dataflow) with medallion architecture and infrastructure as code, or audit and optimize an existing platform for cost and performance.",
+  },
+  {
+    name: "Backend-to-lake integration",
+    description:
+      "End-to-end backend modules (FastAPI, Django, REST APIs) that emit application data into the lake, plus connectors for third-party services and enterprise APIs (ServiceNow, SharePoint, Azure Monitor, CleverTap, BI platforms).",
+  },
+  {
+    name: "Multi-cloud and cross-cloud pipelines",
+    description:
+      "Production delivery across AWS, GCP, and Azure, including cross-cloud streaming and replication (for example AWS to BigQuery via Kafka) with security and compliance coordination.",
   },
   {
     name: "ETL/ELT pipeline engineering",
@@ -395,7 +412,22 @@ export const faq: { question: string; answer: string }[] = [
   {
     question: "What does Daniel Amieva Rodriguez do?",
     answer:
-      "He architects cloud data lakes and warehouses, builds Python and SQL ETL/ELT pipelines with CI/CD, optimizes query and compute costs, and integrates LLM and MCP tooling so business users and AI agents can query governed data.",
+      "He is a full-stack data engineer: he architects cloud data lakes and warehouses from scratch or optimizes existing ones, builds the backend modules (FastAPI, Django) that send application data into the lake, integrates third-party services and APIs, runs Python and SQL ETL/ELT pipelines with CI/CD across AWS, GCP, and Azure, and integrates LLM and MCP tooling so business users and AI agents can query governed data.",
+  },
+  {
+    question: "Is Daniel Amieva Rodriguez a full-stack data engineer?",
+    answer:
+      "Yes. At TeamStation AI he built a medallion data lake from scratch on AWS (Glue, Step Functions, Lambda, DMS), developed FastAPI endpoints and Django backend features that feed it, and integrated ThoughtSpot for natural-language BI. At Rackspace Technology he connected 10+ enterprise APIs into BigQuery pipelines and shipped a Power BI CI/CD pipeline. At Baz Super App he led AWS-to-BigQuery streaming with Kafka.",
+  },
+  {
+    question: "Can Daniel Amieva Rodriguez build a data lake from scratch?",
+    answer:
+      "Yes. At TeamStation AI he architected a ground-up medallion data lake (bronze/silver/gold) with custom Python packages on AWS Glue, Step Functions, Lambda, and DMS streaming, replacing Spark-heavy jobs with DuckDB + Lambda for ~40% lower compute cost and ~60% faster processing. At DGTIC UNAM he built the organization's first data warehouse.",
+  },
+  {
+    question: "Does Daniel Amieva Rodriguez work in multi-cloud environments?",
+    answer:
+      "Yes. He has delivered production work on AWS (Glue, Lambda, Step Functions, DMS, Athena, SAM), GCP (BigQuery, Dataform, Dataproc, Dataflow, Pub/Sub, Cloud Composer), and Azure (Azure AD, Azure Monitor, Microsoft Fabric), including cross-cloud replication of financial data from AWS to BigQuery via Kafka at Baz Super App.",
   },
   {
     question: "Is Daniel Amieva Rodriguez a data engineer?",

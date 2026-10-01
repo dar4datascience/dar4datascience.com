@@ -23,6 +23,7 @@ export function getProfile() {
     github: person.github,
     languages: person.languages,
     yearsOfExperience: person.yearsOfExperience,
+    differentiators: person.differentiators,
   };
 }
 

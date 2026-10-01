@@ -28,67 +28,63 @@ export default function SkillsPage() {
   return (
     <>
       <JsonLd data={pageJsonLd("/skills", "Skills — Daniel Amieva Rodriguez")} />
-      <h1 className="text-3xl font-bold">Skills</h1>
+      <section className="py-16 md:py-24">
+        <p className="eyebrow">Capabilities</p>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl">
+          Skills
+        </h1>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        {skills.map((s) => (
-          <section
-            key={s.category}
-            className="rounded-lg border border-border bg-card p-4"
-          >
-            <h2 className="font-semibold text-accent">{s.category}</h2>
-            <ul className="mt-2 flex flex-wrap gap-2">
-              {s.items.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-full border border-border px-2.5 py-0.5 text-xs"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
-
-      <section aria-labelledby="certifications" className="mt-10">
-        <h2 id="certifications" className="text-2xl font-semibold">
-          Certifications
-        </h2>
-        <ul className="mt-3 space-y-2">
-          {certifications.map((c) => (
-            <li
-              key={c.name}
-              className="rounded-lg border border-border bg-card p-4"
-            >
-              <span className="font-medium">{c.name}</span>
-              <span className="text-muted">
-                {" "}
-                — {c.issuer}, {c.year}
-              </span>
-            </li>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {skills.map((s) => (
+            <section key={s.category} className="card p-5">
+              <h2 className="eyebrow">{s.category}</h2>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {s.items.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
           ))}
-        </ul>
-      </section>
+        </div>
 
-      <section aria-labelledby="education" className="mt-10">
-        <h2 id="education" className="text-2xl font-semibold">
-          Education
-        </h2>
-        <ul className="mt-3 space-y-2">
-          {education.map((e) => (
-            <li
-              key={e.degree}
-              className="rounded-lg border border-border bg-card p-4"
-            >
-              <span className="font-medium">{e.degree}</span>
-              <span className="text-muted">
-                {" "}
-                — {e.institution}, {e.start}–{e.end}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <section aria-labelledby="certifications" className="mt-16">
+          <p className="eyebrow">Credentials</p>
+          <h2 id="certifications" className="mt-2 text-2xl font-bold tracking-tight">
+            Certifications
+          </h2>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {certifications.map((c) => (
+              <li key={c.name} className="card p-5">
+                <p className="font-semibold">{c.name}</p>
+                <p className="mt-1 text-sm text-muted">
+                  {c.issuer} · {c.year}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="education" className="mt-16">
+          <p className="eyebrow">Education</p>
+          <h2 id="education" className="mt-2 text-2xl font-bold tracking-tight">
+            Education
+          </h2>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {education.map((e) => (
+              <li key={e.degree} className="card p-5">
+                <p className="font-semibold">{e.degree}</p>
+                <p className="mt-1 text-sm text-muted">
+                  {e.institution} · {e.start}–{e.end}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </section>
     </>
   );

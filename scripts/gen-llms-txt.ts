@@ -21,6 +21,10 @@ const llmsTxt = `# ${person.name}
 
 ${person.summary}
 
+## What I bring
+
+${person.differentiators.map((d) => `- ${d}`).join("\n")}
+
 ## Current role
 
 - ${experience[0].title} at ${experience[0].company} (${formatDateRange(experience[0].start, experience[0].end)}): ${experience[0].summary}
@@ -55,6 +59,10 @@ const llmsFullTxt = `# ${person.name}
 > ${person.headline}. ${person.location.city}, ${person.location.country}. ${person.yearsOfExperience} years of experience.
 
 ${person.summary}
+
+## What I bring
+
+${person.differentiators.map((d) => `- ${d}`).join("\n")}
 
 ## Experience
 
